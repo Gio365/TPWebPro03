@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!--
+    Fungsi: Bagian head mendefinisikan metadata dokumen, seperti encoding, judul halaman, dan pengaturan viewport.
+    Tag ini penting untuk memberikan informasi dasar ke browser.
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giovanni Nadika - 1303223169 - TP MODUL WEBPRO 03</title>
+  </head>
+  <body>
+    <!--
+    Fungsi: Tag div digunakan untuk mengelompokkan elemen-elemen dalam sebuah blok.
+    Saya menggunakan div ini untuk membungkus header agar terorganisir.
+    -->
+    <div id="header">
+      <!-- Fungsi: <h1> digunakan untuk membuat heading utama atau judul terbesar pada halaman -->
+      <h1>Profile Diri</h1>
+    </div>
+
+    <!--
+    Fungsi: div ini mengelompokkan informasi pribadi (biodata) ke dalam satu bagian.
+    Hal ini membuat pengaturan elemen menjadi lebih mudah.
+    -->
+    <div id="biodata">
+      <!--
+      Fungsi: Tag <table> digunakan untuk menampilkan data dalam bentuk tabel, ideal untuk menampilkan informasi terstruktur seperti biodata.
+      -->
+      <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <!--
+        Fungsi: Tag <caption> digunakan untuk memberikan judul atau deskripsi pada tabel.
+        -->
+        <caption>
+          <strong>BIODATA DIRI</strong>
+        </caption>
+        <tr>
+          <!--
+          Fungsi: <th> digunakan untuk mendefinisikan header dari kolom tabel.
+          Kolom ini penting untuk memberikan nama pada kolom "Atribut" dan "Detail".
+          -->
+          <th>Atribut</th>
+          <th>Detail</th>
+        </tr>
+        <!--
+        Fungsi: <td> digunakan untuk membuat sel data pada tabel, dalam hal ini untuk menampilkan informasi nama, panggilan, usia, dan email.
+        -->
+        <tr>
+          <td>Nama</td>
+          <td>Giovanni Nadika</td>
+        </tr>
+        <tr>
+          <td>Panggilan</td>
+          <td>Gio</td>
+        </tr>
+        <tr>
+          <td>Usia</td>
+          <td>20 Tahun</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>giovanni.nadika@gmail.com</td>
+        </tr>
+      </table>
+    </div>
+
+    <!--
+    Fungsi: div ini mengelompokkan gambar profil untuk mempermudah pengelolaan visual di dalam halaman.
+    -->
+    <div id="gambar-profil">
+      <!--
+      Fungsi: <h2> digunakan untuk memberikan heading kedua, yang lebih kecil dari <h1>, dalam hal ini untuk judul "Gambar Profil".
+      -->
+      <h2>Gambar Profil</h2>
+      <!--
+      Fungsi: <img> digunakan untuk menampilkan gambar pada halaman web.
+      Tag ini penting untuk menampilkan gambar profil pengguna.
+      -->
+      <img
+        src="profile.jpg"
+        alt="Gambar Profil Pribadi"
+        width="200"
+        border="2"
+      />
+    </div>
+
+    <!--
+    Fungsi: div ini mengelompokkan video perkenalan agar bisa dikelola dengan baik.
+    -->
+    <div id="video-perkenalan">
+      <!--
+      Fungsi: <h2> memberikan heading kedua untuk judul "Video Perkenalan".
+      -->
+      <h2>Video Perkenalan</h2>
+      <!--
+      Fungsi: <video> digunakan untuk menampilkan video pada halaman web, dengan attribute controls agar pengguna bisa memutar, pause, dll.
+      -->
+      <video width="320" height="240" controls>
+        <!--
+        Fungsi: <source> menyediakan file video dan tipe formatnya (MP4 dalam hal ini).
+        Browser akan memutuskan apakah bisa memutar format ini.
+        -->
+        <source src="introduction.mp4" type="video/mp4" />
+        <!--
+        Fungsi: Teks alternatif yang muncul jika browser tidak mendukung pemutaran video.
+        -->
+        Browser tidak mendukung video ini.
+      </video>
+    </div>
+
+    <!--
+    Fungsi: div ini mengelompokkan form agar lebih mudah diatur dan diposisikan dalam halaman web.
+    -->
+    <div id="form-hubungi">
+      <!--
+      Fungsi: <h2> digunakan untuk memberikan heading kedua dengan judul "Hubungi Saya".
+      -->
+      <h2>Hubungi Saya</h2>
+      <!--
+      Fungsi: <form> membuat formulir input data pengguna, dalam hal ini untuk memasukkan nama dan pesan.
+      Method post digunakan karena data dikirim secara aman tanpa tampil di URL.
+      -->
+      <form action="#" method="post">
+        <!--
+        Fungsi: <label> memberikan deskripsi untuk input form.
+        Dihubungkan dengan input melalui atribut "for".
+        -->
+        <label for="name">Nama:</label><br />
+        <!--
+        Fungsi: <input> membuat elemen input teks di mana pengguna bisa memasukkan nama mereka.
+        -->
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <!--
+        Fungsi: <label> untuk memberikan deskripsi pada area teks pesan.
+        -->
+        <label for="message">Pesan:</label><br />
+        <!--
+        Fungsi: <textarea> digunakan untuk input teks dalam beberapa baris, dalam hal ini untuk pesan dari pengguna.
+        -->
+        <textarea id="message" name="message" rows="4" required></textarea
+        ><br /><br />
+
+        <!--
+        Fungsi: <button> membuat tombol untuk mengirim data form.
+        -->
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+
+    <!--
+    Fungsi: div ini mengelompokkan tautan ke media sosial agar tampil terpisah dari elemen lain.
+    -->
+    <div id="media-sosial">
+      <!--
+      Fungsi: <h2> digunakan untuk memberikan heading kedua dengan judul "Media Sosial".
+      -->
+      <h2>Media Sosial:</h2>
+      <!--
+      Fungsi: <a> digunakan untuk membuat tautan (link) ke profil media sosial.
+      Atribut "target=_blank" digunakan untuk membuka tautan di tab baru.
+      -->
+      <a href="https://github.com/Gio365" target="_blank">GitHub</a>
+    </div>
+  </body>
+</html>
